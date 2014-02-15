@@ -1,0 +1,6 @@
+<% provide (:title) {"Kayıt ol"} %>
+<h1>Kayıt ol</h1>
+<%= form_for @user, html: {class: "form-horizontal", role: "form"} do |f| %>
+  <%= render 'fields', f: f %>
+  <%= f.submit "Üye ol", class: "btn btn-lg btn-primary col-md-offset-3" %>
+<% end %>

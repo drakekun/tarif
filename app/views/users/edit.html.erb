@@ -1,0 +1,6 @@
+<% provide (:title) {"Kullanıcı bilgilerini değiştir"} %>
+<h1>Profilini güncelle</h1>
+<%= form_for @user, html: {class: "form-horizontal", role: "form"} do |f| %>
+  <%= render 'fields', f: f %>
+  <%= f.submit "Kaydet", class: "btn btn-lg btn-primary col-md-offset-3" %>
+<% end %>

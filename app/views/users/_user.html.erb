@@ -1,0 +1,11 @@
+<li>
+  <p class="col-md-3"> <%= link_to user.username, user %></p>
+  <p class="col-md-3"> <%= user.fullname %></p>
+  <p class="col-md-3"> <%= user.email %></p>
+  <% if current_user.admin? && !current_user?(user) %>
+    <div class"col-md-3">
+      <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "Emin miyiz?" } %>
+    </div>
+  <% end %>
+</li>
